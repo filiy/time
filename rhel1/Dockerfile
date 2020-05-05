@@ -18,4 +18,4 @@ RUN pip3 install ansible-tower-cli
 RUN chown 1001:1001 init.sh && chmod o+w init.sh
 USER 1001
 
-CMD [["/bin/sh" "while true; do echo -e "HTTP/1.1 200 OK\n\n$(date)" | nc -ll -p 8080; done"]
+CMD ["./init.sh"]
